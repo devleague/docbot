@@ -1,0 +1,16 @@
+section.banner {
+  height: 300px;
+  width: 720px;
+  /*background-color: orange;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /*align-items: flex-end;*/
+}
+
+section.information {
+  height: 300px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+}
