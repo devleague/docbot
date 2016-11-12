@@ -31,10 +31,6 @@ app.get('/', (request, response) => {
   response.send('DOCBOT HOMIES @.@.....REPRESENT');
 });
 
-app.get('/pug', (req, res) => {
-  res.render('')
-});
-
 app.listen(app.get('port'), _ => {
   console.log("Node app is running at localhost:" + app.get('port'));
 });
