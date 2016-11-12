@@ -1,0 +1,15 @@
+include ../components/header
+include ../components/footer
+
+doctype
+html
+  head
+    title DocBot
+    link(rel="stylesheet" href="assets/css/app.css")
+
+  body#app
+    +header
+
+    block content
+
+    +footer
