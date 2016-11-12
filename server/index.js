@@ -28,7 +28,7 @@ app.use('/slack', SlackRoute);
 app.use('/alchemy', AlchemyRoute);
 
 app.get('/', (request, response) => {
-  response.send('DOCBOT HOMIES @.@.....REPRESENT');
+  response.render('index');
 });
 
 app.listen(app.get('port'), _ => {
