@@ -28,4 +28,4 @@ Brought to you by **JUST GIT REKT SON** from the middle of the Pacific Ocean.
 - Sean
 
 [1]: server/README.md
-[2]: #
+[2]: chrome-ext/README.md
