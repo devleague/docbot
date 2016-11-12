@@ -1,4 +1,4 @@
-const Express = require('Express');
+const Express = require('express');
 const Router = Express.Router();
 
 Router.post('/', function(req, res) {

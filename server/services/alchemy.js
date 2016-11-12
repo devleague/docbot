@@ -35,12 +35,10 @@ function analyze(params) {
   return new Promise((resolve,reject) => {
     alchemy_language.entities(params, function (err, response) {
       if (err) {
-        reject(err);  
+        return reject(err);  
       }
-      else {
-        console.log(response);
-        resolve(response);
-      }
+      
+      return resolve(response);
     });
   });
 }
