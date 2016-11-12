@@ -1,0 +1,45 @@
+html, body, header, p, ul, h1, h2, h3, h4, h5 {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2, h4 {
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  border-bottom: 1px solid grey;
+}
+
+h3 {
+  margin-right: 10px;
+}
+
+h5 {
+  margin-left: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+}
+
+#admin {
+  margin-left: 30px;
+}
