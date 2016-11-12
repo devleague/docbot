@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "rm -rf ./public/* && gulp & nodemon index.js"
+    "dev": "rm -rf ./public/assets/css/* && gulp & nodemon index.js"
   },
   "engines": {
     "node": "6.9.1"
@@ -47,6 +47,6 @@
     "gulp-postcss": "^6.2.0",
     "postcss": "^5.2.5",
     "postcss-easy-import": "^1.0.1",
-    "postcss-nested": "^1.0.0",
+    "postcss-nested": "^1.0.0"
   }
 }

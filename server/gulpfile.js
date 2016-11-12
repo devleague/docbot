@@ -9,7 +9,7 @@ const postcssNested = require('postcss-nested');
 const paths = {
   scssSrc: 'src/assets/css/app.css',
   scssSrcGlob: 'src/assets/css/**/*',
-  cssDist: 'public/css'
+  cssDist: 'public/assets/css'
 };
 
 gulp.task('css', _ => {
