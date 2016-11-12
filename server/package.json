@@ -7,15 +7,6 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "dependencies": {
-    "bluebird": "^3.4.6",
-    "body-parser": "^1.15.2",
-    "dotenv": "^2.0.0",
-    "express": "^4.13.3",
-    "mongoose": "^4.6.7",
-    "pug": "^2.0.0-beta6",
-    "watson-developer-cloud": "^2.8.2"
-  },
   "engines": {
     "node": "6.9.1"
   },
@@ -39,7 +30,23 @@
     "Jaywon"
   ],
   "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.3",
+    "mongoose": "^4.6.7",
+    "pug": "^2.0.0-beta6",
+    "watson-developer-cloud": "^2.8.2"
+  },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.2.0",z
+    "postcss": "^5.2.5",
+    "postcss-cssnext": "^2.8.0",
+    "postcss-easy-import": "^1.0.1",
+    "postcss-nested": "^1.0.0",
+    "rucksack-css": "^0.8.6"
   }
 }
