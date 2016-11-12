@@ -27,5 +27,5 @@ Brought to you by **JUST GIT REKT SON** from the middle of the Pacific Ocean.
 - Ray
 - Sean
 
-[1]: #
+[1]: server/README.md
 [2]: #
