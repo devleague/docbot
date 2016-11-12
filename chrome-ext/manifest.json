@@ -15,6 +15,7 @@
 
   "permissions": [
     "activeTab",
+    "https://temp-chrome-ext-server-xzmjibnxyh.now.sh/chrome",
     "https://ajax.googleapis.com/"
   ]
 }
