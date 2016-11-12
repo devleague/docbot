@@ -14,7 +14,6 @@ function addContentItem(data){
   return new Promise((resolve, reject) => {
     const item = new ContentItem({data: data});
     item.save(err => {
-      console.log('mongo err', err);
       if (err) {
         return reject(err);
       }
