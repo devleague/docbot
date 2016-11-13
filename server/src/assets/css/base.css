@@ -7,6 +7,14 @@ body {
   background-color: #eee;
 }
 
+blockquote.marketing.good {
+  border-left: 6px solid #66bb6a;
+}
+
+blockquote.marketing.bad {
+  border-left: 6px solid #ef5350 ;
+}
+
 img.side-nav-logo {
   display: block;
   margin-top: 30px;
