@@ -1,20 +1,5 @@
 h3.section Recent Additions
-section#recent-additions.scrollspy
-  table.bordered
-    thead
-      tr
-        th(data-field="id") topic
-        th(data-field="name") url
-    tbody
-      tr
-        td Alvin
-        td
-          a(href="#") wut
-      tr
-        td Alan
-        td
-          a(href="#") wut
-      tr
-        td Jonathan
-        td
-          a(href="#") wut
+section#recent-additions.collection.scrollspy
+  each link in latest
+    if (link.url)
+      a.collection-item(href=`${link.url}`)= link.url

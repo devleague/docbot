@@ -1,32 +1,5 @@
 h3.section Popular
-section#popular-resources.scrollspy
-  table.bordered
-    thead
-      tr
-        th(data-field="id") topic
-        th(data-field="name") url
-    tbody
-      tr
-        td Alvin
-        td
-          a(href="#") wut
-      tr
-        td Alan
-        td
-          a(href="#") wut
-      tr
-        td Jonathan
-        td
-          a(href="#") wut
-      tr
-        td Jonathan
-        td
-          a(href="#") wut
-      tr
-        td Jonathan
-        td
-          a(href="#") wut
-      tr
-        td Jonathan
-        td
-          a(href="#") wut
+section#popular-resources.collection.scrollspy
+  each link in latest
+    if (link.url)
+      a.collection-item(href=`${link.url}`)= link.url
