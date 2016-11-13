@@ -8,19 +8,18 @@ body {
 }
 
 img.side-nav-logo {
+  display: block;
   margin-top: 30px;
-  height: 140px;
-  width: 160px;
+  /* chrome img border hack re: http://stackoverflow.com/a/14709695/2612640 */
+  height: 0;
+  width: 0;
+  padding: 70px 80px;
 
   background-image: url('/assets/imgs/docbot-logo.png');
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
 }
 
 ul.section.table-of-contents li a.active {
   border-left: 2px solid #66bb6a;
-}
-
-.footer-copyright i {
-
 }
