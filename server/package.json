@@ -4,8 +4,9 @@
   "description": "AI Slack Integration/Content Aggregator",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "rm -rf ./public/assets/css/* && gulp & nodemon index.js"
+    "start": "npm run build && node index.js",
+    "dev": "rm -rf ./public/assets/css/* && gulp & nodemon index.js",
+    "build": "gulp build"
   },
   "engines": {
     "node": "6.9.1"
