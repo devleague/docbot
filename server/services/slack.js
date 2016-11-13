@@ -27,7 +27,7 @@ function delegateAction(cmd){
         }
       }
       return resolve({
-        method: MongoService.getTopContentItemsByCountAndKeyword(keyword),
+        method: MongoService.getTopContentItemByKeyword(keyword),
         keyword: keyword
       });
     }else if (params.length > 1){
@@ -61,9 +61,9 @@ function parseSingle(data, keyword) {
   return {
     "response_type": "in_channel",
     "text": `Here is your result for \`${keyword}\`!`,
-    "attachements": [
+    "attachments": [
       {
-        "text": data.url
+        "text": `${data.url}`
       }
     ]
   }
