@@ -73,6 +73,12 @@ section.main-content {
   align-items: center;
 }
 
+/*Container for link section in card.*/
+
+.card section {
+  overflow: scroll;
+}
+
 /*Controls li in sidebar and list of links in the card sections.*/
 
 li {
@@ -2811,4 +2817,8 @@ button.picker__today:focus,button.picker__clear:focus,button.picker__close:focus
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
+}
+
+.card-page section.links {
+  overflow: scroll;
 }
