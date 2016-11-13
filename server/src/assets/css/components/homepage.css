@@ -1,3 +1,4 @@
+/*Main title and subtitle section.*/
 section.col.s12 {
   height: 500px;
   width: auto;
@@ -6,18 +7,21 @@ section.col.s12 {
   align-items: center;
 }
 
+/*Content section.*/
 section.main-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+/*Container for the three sections.*/
 .row {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
+/*Container for one section.*/
 .card {
   height: 500px;
   width: 1200px;
@@ -27,28 +31,30 @@ section.main-content {
   align-items: center;
 }
 
-.col.s4 {
-  height: 500px;
-  width: 300px;
-}
-
-ul {
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
+/*Controls li in sidebar and list of links in the card sections.*/
 li {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
+/*Container for title and "See More" in the card container. */
 .title {
   height: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+h5.see-more {
+  margin-left: 20px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+/*Controls font-size for /docbot title in sidebar nav.*/
+#logo {
+  font-size: 30px;
 }

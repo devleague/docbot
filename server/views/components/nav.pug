@@ -1,22 +1,30 @@
-ul.side-nav
+ul#slide-out.side-nav
   li
     .userView
+      .background
   li
-    a(href='#!')
+    a#logo(href='#!')
       img#icon(src='assets/imgs/slack-symbol.png', alt='slack')
       | /docbot
   li
     .divider
   li
-    a(href='#!') Admin
-  li
-    .divider
-  // <li><a class="subheader">Subheader</a></li>
-  li
-    a(href='#!') Recent Additions
+    a(href='#!')
+      h5 Admin
   li
     .divider
   li
-    a(href='#!') Recent Asks
+    a(href='#!')
+      h5 Recent Additions
   li
     .divider
+  li
+    a(href='#!')
+      h5 Recent Asks
+  li
+    .divider
+  li
+    a(href='#!')
+      h5 Frequent Asks
+a.button-collapse.show-on-large(href='#', data-activates='slide-out')
+  i.material-icons menu
