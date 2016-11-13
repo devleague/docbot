@@ -7,22 +7,48 @@
   <title>Docbot</title>
   <style>
       body { 
-        background-color: #000;
-        color: #fff;
-        width:300px;
-        height:200px;
+        background-color: #eee;
+        opacity: .8;
+        color: #333;
+        width:340px;
+        height:300px;
+      }
+
+      div.logo {
+        margin: 0 auto;
+        text-align: center;
       }
 
       div.message {
-        margin-top: 100px;
+        margin: 0 auto;
         text-align: center;
+        font-size: 18px;
+        font-weight: bold;
       } 
+
+      div.message > div {
+        text-align:center;
+        display: inline-block;
+        margin:5px 0;
+      }
+
+      #bottomStatus{
+        display:none;
+      }
+
   </style>
+  <script src="jquery-3.1.1.min.js"></script>
   <script src="index.js"></script>
 </head>
 <body>
-  <div class="message" id="status">
-    Feeding Docbot knowledge...
+  <div class="message" >
+    <div id="topStatus">Feeding Docbot knowledge...</div>
+  </div>
+  <div class="logo">
+    <span><img src="docbot-logo.png" alt="Docbot"></span>
+  </div>
+  <div class="message" >
+    <div id="bottomStatus"></div>
   </div>
 </body>
 </html>
