@@ -4,6 +4,7 @@
   "description": "A service built to utilize IBM's Watson AI to help curate resources for students learning JavaScript.",
   "main": "server/index.js",
   "dependencies": {
+    "autoprefixer": "^6.5.3",
     "bluebird": "^3.4.6",
     "body-parser": "^1.15.2",
     "dotenv": "^2.0.0",
