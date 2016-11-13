@@ -1,9 +1,11 @@
 const gulp = require('gulp');
 
 const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
 const concat = require('gulp-concat');
 const postcssEasyImport = require('postcss-easy-import');
 const postcssNested = require('postcss-nested');
+
 
 // magic string paths
 const paths = {
@@ -15,7 +17,8 @@ const paths = {
 gulp.task('css', _ => {
   const processors = [
     postcssEasyImport({glob: true}),
-    postcssNested
+    postcssNested,
+    autoprefixer({browsers: ['last 2 versions']})
   ];
 
   return gulp.src(paths.scssSrc)
