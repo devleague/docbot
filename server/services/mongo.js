@@ -54,7 +54,7 @@ function addContentItem(data){
 
 function getTopContentItemsByCountAndKeyword(keyword, count) {
   return new Promise((resolve, reject) => {
-    ContentItem.find({entities: {$elemMatch: { text: {$regex: keyword, $options: 'i'} }}}, (err, items) => {
+    ContentItem.find({entities: {$elemMatch: { text: {$regex: keyword, $options: 'i'} }}}, {}, {limit: Number(count)}, (err, items) => {
       if (err) {
         return reject(err);
       }
