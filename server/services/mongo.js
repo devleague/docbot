@@ -23,6 +23,24 @@ function addContentItem(data){
   });
 }
 
+function getTopContentItemsByCountAndKeyword(keyword, count) {
+
+}
+
+function getTopContentItemByKeyword(keyword) {
+  return new Promise((resolve, reject) => {
+    ContentItem.findOne({'data': keyword}), 'url', (err, item) => {
+  if (err) {
+    return reject(err);
+  }
+
+  return resolve(item);
+}    
+  });
+}
+
 module.exports = {
-  addContentItem: addContentItem
+  addContentItem: addContentItem,
+  getTopContentItemByKeyword: getTopContentItemByKeyword,
+  getTopContentItemsByCountAndKeyword: getTopContentItemsByCountAndKeyword
 };

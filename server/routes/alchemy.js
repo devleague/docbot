@@ -11,11 +11,27 @@ Router.post('/analyze', (req, res) => {
       return MongoService.addContentItem(result); 
     })
     .then(() => {
-      res.json('OK');
+      return res.json('OK');
     })
     .catch(e => {
       return res.json(500, e);
     });
+});
+
+Router.get('/query/:keyword', (req, res) => {
+  const keyword = req.params.keyword;
+
+  if(!keyword){
+    return res.json(400, 'No keyword specified');
+  }
+
+  MongoService.getTopContentItemByKeyword(keyword)
+    .then( result => {
+      return res.json(result);
+    })
+    .catch(e => {
+      return res.json(500, e);
+    }); 
 });
 
 module.exports = Router; 
