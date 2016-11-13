@@ -63,7 +63,9 @@ function getTopContentItemByKeyword(keyword) {
         return reject(err);
       }
 
-      return resolve(items);
+      const topItem = (items.length) > 0 ? items[0] : undefined;
+
+      return resolve(topItem);
     })
   });
 }
