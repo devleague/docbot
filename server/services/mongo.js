@@ -32,7 +32,7 @@ function getTopContentItemsByCountAndKeyword(keyword, count) {
       }
 
       items.sort(sortByRelevancy(keyword));
-      
+
       const topItems = items.slice(0, count);
 
       return resolve(topItems);
@@ -78,6 +78,18 @@ function getLatestItems() {
   })
 }
 
+function getAllItems() {
+  console.log('getting all')
+  return new Promise((resolve, reject) => {
+    return ContentItem.find((err, latest) => {
+      if (err) {
+        return reject(err);
+      }
+      return resolve(latest)
+    });
+  })
+}
+
 //private methods
 function convertToSchema(data){
   let result = {
@@ -109,17 +121,17 @@ function convertToSchema(data){
 
 function sortByRelevancy(keyword) {
   return function (first, second){
-    const firstRelevance = first.entities.reduce(reduceByRelevancy(keyword), 0); 
+    const firstRelevance = first.entities.reduce(reduceByRelevancy(keyword), 0);
     const secondRelevance = second.entities.reduce(reduceByRelevancy(keyword), 0);
-  
+
     if(firstRelevance > secondRelevance) {
       return -1;
     }
-  
+
     if(firstRelevance === secondRelevance) {
       return 0;
     }
-  
+
     if(firstRelevance < secondRelevance) {
       return 1;
     }
@@ -130,8 +142,8 @@ function reduceByRelevancy(keyword){
   return function (a, b) {
     if( b.text && b.text.toLowerCase().indexOf(keyword.toLowerCase()) > -1){
       return b.relevance + a;
-    }  
-  
+    }
+
     return a;
   }
 }
