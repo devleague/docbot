@@ -23,8 +23,10 @@
     "postcss-nested": "^1.0.0"
   },
   "scripts": {
-    "start": "node server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && node server/index.js",
+    "dev": "rm -rf ./server/public/assets/css/* && gulp & nodemon server/index.js",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
