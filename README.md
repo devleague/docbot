@@ -1,4 +1,4 @@
-# docbot
+# /docbot
 
 A service built to utilize IBM's Watson AI to help curate resources for students learning JavaScript.
 
@@ -8,26 +8,28 @@ We then store that data into our Document Store Database (MongoDB).
 
 Students can retrieve resources via our Slack Channel with the command `/docbot [topic]`, *topic* can be things such as `module pattern`, `Object-Oriented Programming`, `best practices`, or `ORM` for example.
 
-# developing
+### Developing
 
-**prerequities**
+**requirements**
 
 - mongoDB somewhere in the tubes [try mLab](https://mlab.com/)
 - ibm watson developer api key [ugh, trial](https://www.ibm.com/watson/developercloud/)
 - deployed on public facing server. This is due to how Slack's slask command works
 - [slack slash command documentation](https://api.slack.com/slash-commands)
 
-**important**: must have a `.env` file located at the project's root directory. The file should look like:
+**.env file**
+
+must have a `.env` file located at the project's root directory. The file should look like:
 
 ```
-API_KEY={{KEY HERE}}
+API_KEY={{ibm watson api key}}
 MONGO_URL='{{mongodb://user:passowrd!@mongourl:51697/docbot}}'
 ```
 
-## server
+## Server
 see the [README.md][1]
 
-## chrome extension
+## Chrome Extension
 see the [README.md][2]
 
 # who made this?
