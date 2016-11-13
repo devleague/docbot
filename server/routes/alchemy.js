@@ -34,6 +34,26 @@ Router.get('/query/:keyword', (req, res) => {
     });
 });
 
+Router.get('/query/:keyword/:count', (req, res) => {
+  const keyword = req.params.keyword;
+  const count = req.params.count;
+
+  if(!keyword){
+    return res.json(400, 'No keyword specified');
+  }
+
+  if(isNaN(count)){
+    return res.json(400, 'Not a valid count');
+  }
+
+  MongoService.getTopContentItemsByCountAndKeyword(keyword, count)
+    .then( result => {
+      return res.json(result);
+    })
+    .catch(e => {
+      return res.json(500, e);
+    });
+});
 Router.get('/latest', (req, res) => {
   MongoService.getLatestItems()
     .then(result => {

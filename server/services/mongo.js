@@ -53,7 +53,15 @@ function addContentItem(data){
 }
 
 function getTopContentItemsByCountAndKeyword(keyword, count) {
+  return new Promise((resolve, reject) => {
+    ContentItem.find({entities: {$elemMatch: { text: {$regex: keyword, $options: 'i'} }}}, (err, items) => {
+      if (err) {
+        return reject(err);
+      }
 
+      return resolve(items);
+    })
+  });
 }
 
 function getTopContentItemByKeyword(keyword) {
