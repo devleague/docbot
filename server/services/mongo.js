@@ -54,7 +54,7 @@ function addContentItem(data){
 
 function getTopContentItemsByCountAndKeyword(keyword, count) {
   return new Promise((resolve, reject) => {
-    ContentItem.find({entities: {$elemMatch: { text: {$regex: keyword, $options: 'i'} }}}, (err, items) => {
+    ContentItem.find({entities: {$elemMatch: { text: {$regex: keyword, $options: 'i'} }}}).limit(Number(count)).find((err, items) => {
       if (err) {
         return reject(err);
       }
@@ -78,7 +78,18 @@ function getTopContentItemByKeyword(keyword) {
   });
 }
 
-function getLatestItems(){
+function getTopContentByPopularityCount() {
+  return new Promise((resolve, reject) => {
+    return ContentItem.find().sort({count: -1}).limit(10).find((err, latest) => {
+      if (err) {
+        return reject(err);
+      }
+      return resolve(latest)
+    });
+  })
+}
+
+function getLatestItems() {
   return new Promise((resolve, reject) => {
     return ContentItem.find().sort({$natural: -1}).limit(10).find((err, latest) => {
       if (err) {
@@ -93,5 +104,6 @@ module.exports = {
   addContentItem: addContentItem,
   getTopContentItemByKeyword: getTopContentItemByKeyword,
   getTopContentItemsByCountAndKeyword: getTopContentItemsByCountAndKeyword,
+  getTopContentByPopularityCount: getTopContentByPopularityCount,
   getLatestItems: getLatestItems
 };
