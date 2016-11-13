@@ -2,7 +2,8 @@
   "manifest_version": 2,
 
   "name": "Docbot",
-  "description": "This extension allows you to submit content URL's into a Watson Machine Learning analysis to curate articles which users can query top results by keyword or author directly from their Slack channels via integrated Slack commands such as: /docbot [topic] [count]",
+  "short_name": "Curated Search Engine for Teams",
+  "description": "Docbot plugin for integration with Docbot Slack integration.",
   "version": "1.0",
 
   "browser_action": {
