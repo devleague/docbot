@@ -8,7 +8,7 @@ We then store that data into our Document Store Database (MongoDB).
 
 Students can retrieve resources via our Slack Channel with the command `/docbot [topic]`, *topic* can be things such as `module pattern`, `Object-Oriented Programming`, `best practices`, or `ORM` for example.
 
-# Developing
+# developing
 
 **prerequities**
 
