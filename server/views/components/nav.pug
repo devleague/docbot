@@ -1,28 +1,15 @@
-ul#slide-out.side-nav.fixed
-  li
-    .userView
-      .background
-  li
-    a#logo(href='/') /docbot
-  li
-    .divider
-  li
-    a(href='/admin')
-      h5 Admin
-  li
-    .divider
-  li
-    a(href='/additions')
-      h5 Recent Additions
-  li
-    .divider
-  li
-    a(href='/recent')
-      h5 Recent Asks
-  li
-    .divider
-  li
-    a(href='/popular')
-      h5 Frequent Asks
-  a.button-collapse.hide-on-med-and-up(href='#', data-activates='slide-out')
-    i.material-icons menu
+.pin-side-nav(data-target="content")
+  img.side-nav-logo
+  ul.section.table-of-contents
+    li
+      a(href="#recent-additions") Recent Additions
+    li
+      a(href="#recent-requests") Recent Requests
+    li
+      a(href="#popular-resources") Popular Resources
+    //- li
+    //-   a(href="#source-code")
+    //-     small source code
+    li
+      a(href="#top")
+        small /docbot v1.0.0

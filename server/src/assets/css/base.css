@@ -1,1 +1,18 @@
+html, body, .block {
+  height: 100%;
+}
 
+body {
+  color: #222;
+  background-color: #eee;
+}
+
+img.side-nav-logo {
+  margin-top: 30px;
+  height: 140px;
+  width: 160px;
+
+  background-image: url('/assets/imgs/docbot-logo.png');
+  background-size: cover;
+  background-position: center center;
+}
