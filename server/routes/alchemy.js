@@ -54,6 +54,17 @@ Router.get('/query/:keyword/:count', (req, res) => {
       return res.json(500, e);
     });
 });
+
+Router.get('/popular', (req, res) => {
+  MongoService.getTopContentByPopularityCount()
+    .then(result => {
+      return res.json(result);
+    })
+    .catch(e => {
+      return res.json(500, e);
+    });
+})
+
 Router.get('/latest', (req, res) => {
   MongoService.getLatestItems()
     .then(result => {
