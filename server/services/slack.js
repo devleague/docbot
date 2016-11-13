@@ -18,7 +18,7 @@ function delegateAction(cmd){
       if(query.length === 1){
         keyword = query[0];
       }else if (query.length >= 2){
-        if (query[1].indexOf(actions) > -1 ){
+        if (actions.indexOf(query[1]) > -1 ){
           keyword = query[0];
           wordAction = query[1];
         }else {
@@ -27,27 +27,23 @@ function delegateAction(cmd){
         }
       }
 
-      // return
       if (wordAction){
-        console.log('hello')
-        switch (wordAction) {
-          case 'random':
-            let rndNum = Math.floor(Math.random() * 100) +1;
-            return resolve({
-              method: MongoService.getTopContentItemsByCountAndKeyword(keyword, rndNum),
-              keyword: keyword
-            });
-          default:
-            return resolve({
-              method: MongoService.getAllItems(keyword),
-              keyword: keyword
-            });
+        console.log(wordAction)
+        if (wordAction === 'random'){
+          console.log('random')
+        }else{
+          console.log('must be all')
+          return resolve({
+            method: MongoService.getAllItems(keyword),
+            keyword: keyword
+          });
         }
+      }else{
+        return resolve({
+          method: MongoService.getTopContentItemByKeyword(keyword),
+          keyword: keyword
+        });
       }
-      // return resolve({
-      //   method: MongoService.getTopContentItemsByKeyword(keyword),
-      //   keyword: keyword
-      // });
     }else if (params.length > 1){
       if (!params[3]){
         keyword = params[1].trim();
@@ -77,7 +73,6 @@ function parseDocuments(data, keyword){
 // private static functions
 function parseSingle(data, keyword) {
   return {
-    "response_type": "in_channel",
     "text": `Here is your result for \`${keyword}\`!`,
     "attachements": [
       {
@@ -93,13 +88,29 @@ function parseMany(data, keyword) {
     urls.push(data[i].url);
   }
   return {
-    "response_type": "in_channel",
     "text": `Here are your results for \`${keyword}\`!`,
     "attachments": [
       {
         "text": urls.join('\n')
       }
     ]
+  }
+}
+
+function doWordAction(action, resolve){
+  console.log(action)
+  let callback = {};
+  if (action === 'random'){
+    let rndNum = Math.floor(Math.random() * 100) +1;
+    return resolve({
+      method: MongoService.getTopContentItemsByCountAndKeyword(keyword, rndNum),
+      keyword: keyword
+    });
+  }else{
+    return resolve({
+      method: MongoService.getAllItems(keyword),
+      keyword: keyword
+    });
   }
 }
 
