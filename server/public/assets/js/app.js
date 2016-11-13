@@ -19,23 +19,10 @@ window.onload = function() {
       console.log(content);
 
       for (let j = 0; j<content.length; j++) {
-        console.log(content.length);
-        nodelist[j].href = content[j].url;
-        text[j].innerHTML = content[j].url; 
-
-        // if (content.length > nodelist.length) {
-        //   // let parent = document.querySelectorAll('section.links.recent-additions ul');
-        //   for (let i = 0; i<(content.length-nodelist.length)+nodelist.length; i++) {
-        //     let newlink = document.createElement('li');
-        //
-        //   }
-          // let parent = document.querySelectorAll('section.links ul li h5');
-          // parent.appendChild(newlink);
-          // parent[i].innerHTML = content[j].url;
-        // }
-
-
+          console.log(content.length);
+          nodelist[j].href = content[j].url;
+          text[j].innerHTML = content[j].url;
+        }
       }
-    }
 
-}
+  }
