@@ -1,0 +1,5 @@
+h3.section Recent Additions
+section#recent-additions.collection.scrollspy
+  each link in latest
+    if (link.url)
+      a.collection-item(href=`${link.url}`)= link.url
