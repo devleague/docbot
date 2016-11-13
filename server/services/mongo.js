@@ -1,7 +1,7 @@
 'use strict';
 const mongoose = require('mongoose');
 const Promise = require('bluebird');
-const ContentItemSchema = require('../models/contentitem').ContentItem;
+const ContentItemSchema = require('../models/ContentItem').ContentItem;
 
 if(!process.env.MONGO_URL){
   throw new Error('MONGO_URL not defined');
@@ -58,13 +58,13 @@ function getTopContentItemsByCountAndKeyword(keyword, count) {
 
 function getTopContentItemByKeyword(keyword) {
   return new Promise((resolve, reject) => {
-    ContentItem.findOne({'data': keyword}), 'url', (err, item) => {
+    ContentItem.find({entities: {$elemMatch: { text: {$regex: keyword, $options: 'i'} }}}, (err, items) => {
       if (err) {
         return reject(err);
       }
 
-      return resolve(item);
-    }
+      return resolve(items);
+    })
   });
 }
 
