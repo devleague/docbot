@@ -8,16 +8,16 @@
     "body-parser": "^1.15.2",
     "dotenv": "^2.0.0",
     "express": "^4.13.3",
-    "gulp-concat": "^2.6.0",
-    "mongoose": "^4.6.7",
-    "postcss-scss": "^0.4.0",
-    "pug": "^2.0.0-beta6",
-    "watson-developer-cloud": "^2.8.2",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
     "gulp-postcss": "^6.2.0",
+    "mongoose": "^4.6.7",
     "postcss": "^5.2.5",
     "postcss-easy-import": "^1.0.1",
-    "postcss-nested": "^1.0.0"
+    "postcss-nested": "^1.0.0",
+    "postcss-scss": "^0.4.0",
+    "pug": "^2.0.0-beta6",
+    "watson-developer-cloud": "^2.8.2"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
