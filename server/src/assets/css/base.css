@@ -4,6 +4,16 @@ html, body, header, p, ul, h1, h2, h3, h4, h5 {
   font-family: 'Roboto', sans-serif;
 }
 
+header, main, footer {
+  padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
 .container-page {
   height: 500px;
   width: auto;

@@ -1,4 +1,4 @@
-ul#slide-out.side-nav
+ul#slide-out.side-nav.fixed
   li
     .userView
       .background
@@ -26,5 +26,5 @@ ul#slide-out.side-nav
   li
     a(href='/popular')
       h5 Frequent Asks
-a.button-collapse.show-on-large(href='#', data-activates='slide-out')
-  i.material-icons menu
+  a.button-collapse.hide-on-med-and-up(href='#', data-activates='slide-out')
+    i.material-icons menu
