@@ -12,21 +12,21 @@
     "mongoose": "^4.6.7",
     "postcss-scss": "^0.4.0",
     "pug": "^2.0.0-beta6",
-    "watson-developer-cloud": "^2.8.2"
-  },
-  "devDependencies": {
-    "nodemon": "^1.11.0",
+    "watson-developer-cloud": "^2.8.2",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.2.0",
     "postcss": "^5.2.5",
     "postcss-easy-import": "^1.0.1",
     "postcss-nested": "^1.0.0"
   },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build && node server/index.js",
     "dev": "rm -rf ./server/public/assets/css/* && gulp & nodemon server/index.js",
-    "build": "gulp build"
+    "build": "./node_modules/.bin/gulp build"
   },
   "repository": {
     "type": "git",
