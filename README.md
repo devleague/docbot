@@ -12,6 +12,13 @@ More features are being planned for the slack slash command. :sparkles:
 
 # Developing
 
+**important**: must have a `.env` file located at the project's root directory. The file should look like:
+
+```
+API_KEY={{KEY HERE}}
+MONGO_URL='{{mongodb://user:passowrd!@mongourl:51697/docbot}}'
+```
+
 ## server
 see the [README.md][1]
 
