@@ -1,5 +1,7 @@
-h3.section Recent Additions
+
+h3.section.center-align Recent Additions
+
 section#recent-additions.collection.scrollspy
   each link in latest
     if (link.url)
-      a.collection-item(href=`${link.url}`)= link.url
+      a.collection-item.truncate(href=`${link.url}`)= link.url
