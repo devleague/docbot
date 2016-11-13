@@ -59,7 +59,6 @@ function parseDocuments(data, keyword){
 // private static functions
 function parseSingle(data, keyword) {
   return {
-    "response_type": "in_channel",
     "text": `Here is your result for \`${keyword}\`!`,
     "attachements": [
       {
@@ -75,7 +74,6 @@ function parseMany(data, keyword) {
     urls.push(data[i].url);
   }
   return {
-    "response_type": "in_channel",
     "text": `Here are your results for \`${keyword}\`!`,
     "attachments": [
       {
