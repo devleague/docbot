@@ -26,12 +26,18 @@ function delegateAction(cmd){
           wordAction = query[2];
         }
       }
-      return resolve(MongoService.getTopContentItemsByCountAndKeyword(keyword));
+      return resolve({
+        method: MongoService.getTopContentItemsByCountAndKeyword(keyword),
+        keyword: keyword
+      });
     }else if (params.length > 1){
       if (!params[3]){
         keyword = params[1].trim();
         numAction = Number(params[2]);
-        return resolve(MongoService.getTopContentItemsByCountAndKeyword(keyword, numAction))
+        return resolve({
+          method: MongoService.getTopContentItemsByCountAndKeyword(keyword, numAction),
+          keyword: keyword
+        });
       }else if (nth.indexOf(params[3]) > -1){
         // find the position of the links
         return reject('Not Accessible Yet')
@@ -40,27 +46,43 @@ function delegateAction(cmd){
   });
 }
 
-function parseDocuments(data){
+function parseDocuments(data, keyword){
   if (data.url){
-    return parseSingle(data);
+    return parseSingle(data, keyword);
   }else if (data.length > 0){
-    return parseMany(data);
+    return parseMany(data, keyword);
   }else{
     return 'Not Found';
   }
 }
 
 // private static functions
-function parseSingle(data) {
-  return data.url;
+function parseSingle(data, keyword) {
+  return {
+    "response_type": "in_channel",
+    "text": `Here is your result for \`${keyword}\`!`,
+    "attachements": [
+      {
+        "text": data.url
+      }
+    ]
+  }
 }
 
-function parseMany(data) {
+function parseMany(data, keyword) {
   let urls = [];
   for (var i = 0; i < data.length; i++){
     urls.push(data[i].url);
   }
-  return urls.join('\n');
+  return {
+    "response_type": "in_channel",
+    "text": `Here are your results for \`${keyword}\`!`,
+    "attachments": [
+      {
+        "text": urls.join('\n')
+      }
+    ]
+  }
 }
 
 module.exports = {
