@@ -7,8 +7,10 @@ Router.post('/', function(req, res) {
   const command = req.body.text;
 
   SlackService.delegateAction(command)
-    .then(result => {
-      return res.json(SlackService.parseDocuments(result))
+    .then(action => {
+      action.method.then(result => {
+        return res.json(SlackService.parseDocuments(result, action.keyword))
+      })
     })
     .catch(e => {
       return res.send('Not Found')
