@@ -29,6 +29,7 @@ function delegateAction(cmd){
 
       // return
       if (wordAction){
+        console.log('hello')
         switch (wordAction) {
           case 'random':
             let rndNum = Math.floor(Math.random() * 100) +1;
@@ -43,10 +44,10 @@ function delegateAction(cmd){
             });
         }
       }
-      return resolve({
-        method: MongoService.getTopContentItemsByKeyword(keyword),
-        keyword: keyword
-      });
+      // return resolve({
+      //   method: MongoService.getTopContentItemsByKeyword(keyword),
+      //   keyword: keyword
+      // });
     }else if (params.length > 1){
       if (!params[3]){
         keyword = params[1].trim();
