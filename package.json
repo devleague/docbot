@@ -33,7 +33,13 @@
     "type": "git",
     "url": "git+https://github.com/rumblex/nodeknockout2016-jgrs.git"
   },
-  "author": "Jay Won <jason@sudokrew.com> (http://sudokrew.com)",
+  "author": "Gina Watanabe & Her Minions",
+  "contributors": [
+    "Gina Watanabe",
+    "Sgnl",
+    "Nakaz",
+    "Jaywon"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rumblex/nodeknockout2016-jgrs/issues"
