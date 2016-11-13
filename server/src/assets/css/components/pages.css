@@ -1,0 +1,8 @@
+.card-page {
+  height: 1000px;
+  width: 1200px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}

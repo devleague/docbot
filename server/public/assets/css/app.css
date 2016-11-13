@@ -2803,3 +2803,12 @@ button.picker__today:focus,button.picker__clear:focus,button.picker__close:focus
 .picker--time .picker__box{font-size:1em;background:#f2f2f2;padding:0}
 
 @media (min-height: 40.125em){.picker--time .picker__box{margin-bottom:5em}}
+
+.card-page {
+  height: 1000px;
+  width: 1200px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
