@@ -31,6 +31,22 @@ app.get('/', (request, response) => {
   response.render('index');
 });
 
+app.get('/admin', (req, res) => {
+  res.render('page-admin/admin');
+})
+
+app.get('/additions', (req, res) => {
+  res.render('page-additions/additions');
+})
+
+app.get('/recent', (req, res) => {
+  res.render('page-recent/recent');
+})
+
+app.get('/popular', (req, res) => {
+  res.render('page-popular/popular');
+})
+
 app.listen(app.get('port'), _ => {
   console.log("Node app is running at localhost:" + app.get('port'));
 });

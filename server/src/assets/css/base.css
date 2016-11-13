@@ -4,8 +4,8 @@ html, body, header, p, ul, h1, h2, h3, h4, h5 {
   font-family: 'Roboto', sans-serif;
 }
 
-.container {
-  height: 2000px;
+.container-page {
+  height: 500px;
   width: auto;
   display: flex;
   flex-direction: column;
