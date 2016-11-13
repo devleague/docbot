@@ -26,6 +26,13 @@ API_KEY={{ibm watson api key}}
 MONGO_URL='{{mongodb://user:passowrd!@mongourl:51697/docbot}}'
 ```
 
+**get dependencies**
+
+```bash
+npm install -g yarn
+yarn install
+```
+
 ## Server
 see the [README.md][1]
 
