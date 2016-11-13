@@ -4,14 +4,16 @@ const MongoService = require('../services/mongo');
 const SlackService = require('../services/slack');
 
 Router.post('/', function(req, res) {
-  const keyword = req.body.text;
+  const command = req.body.text;
 
-  MongoService.getTopContentItemByKeyword(keyword)
-    .then(result => {
-      return res.json(SlackService.getDocuments(result))
+  SlackService.delegateAction(command)
+    .then(action => {
+      action.method.then(result => {
+        return res.json(SlackService.parseDocuments(result, action.keyword))
+      })
     })
     .catch(e => {
-      return res.send('Not Found');
+      return res.send('Not Found')
     })
 });
 
