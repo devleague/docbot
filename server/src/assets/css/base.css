@@ -3,7 +3,7 @@ html, body, .block {
 }
 
 body {
-  color: #222;
+  color: #333;
   background-color: #eee;
 }
 
@@ -15,4 +15,12 @@ img.side-nav-logo {
   background-image: url('/assets/imgs/docbot-logo.png');
   background-size: cover;
   background-position: center center;
+}
+
+ul.section.table-of-contents li a.active {
+  border-left: 2px solid #66bb6a;
+}
+
+.footer-copyright i {
+
 }
