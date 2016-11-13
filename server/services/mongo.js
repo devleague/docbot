@@ -1,7 +1,7 @@
 'use strict';
 const mongoose = require('mongoose');
 const Promise = require('bluebird');
-const schema = require('../models/contentitem');
+const ContentItemSchema = require('../models/contentitem').ContentItem;
 
 if(!process.env.MONGO_URL){
   throw new Error('MONGO_URL not defined');
@@ -9,7 +9,7 @@ if(!process.env.MONGO_URL){
 
 mongoose.connect(process.env.MONGO_URL);
 
-const ContentItem = mongoose.model('ContentItem', schema.contentItem);
+const ContentItem = mongoose.model('ContentItem', ContentItemSchema);
 
 function convertToSchema(data){
   let result = {

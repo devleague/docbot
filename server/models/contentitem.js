@@ -11,6 +11,6 @@ const ContentItem = new Schema({
 })
 
 module.exports = {
-  contentItem: ContentItem
+  ContentItem: ContentItem
 }
 
