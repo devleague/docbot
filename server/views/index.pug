@@ -1,83 +1,85 @@
 extends layouts/application
 
 block content
-  //- Banner with general information.
-  section.col.s12
-    .col.s8
-      h1#title /docbot
-      .divider
-      h4#subtitle No (good) link left behind.
-  section.main-content
-    //- Recently added links from admin.
-    .column
-      .card.col.s12
-        .title
-          h4 Recent Additions
-        section
-          ul
-            li
-              img(src='assets/imgs/slack-symbol.png', alt='')
-              h5 www.ijustpostedthisurl.com
-            li
-              img(src='assets/imgs/slack-symbol.png', alt='')
-              h5 www.thiswasthesecondmostrecentpost.com
-            li
-              img(src='assets/imgs/slack-symbol.png', alt='')
-              h5 www.thiswasthethirdmostrecentpost.com
-            li
-              img(src='assets/imgs/slack-symbol.png', alt='')
-              h5 www.thiswasthefourthmostrecentpost.com
-            li
-              img(src='assets/imgs/slack-symbol.png', alt='')
-              h5 www.thiswasthefifthmostrecentpost.com
-        .footer
-          a(href='/additions')
-            h6 See more
-      //- Most frequent keywords asked and links pulled.
-      .card.col.s12
-        .title
-          h4 Frequent Asks
-        section
-          ul
-            li
-              img(src='assets/imgs/slack-symbol.png', alt='')
-              h5 www.mostaskedforurlever.com
-            li
-              img(src='assets/imgs/slack-symbol.png', alt='')
-              h5 www.thiswasthesecondmostaskedfor.com
-            li
-              img(src='assets/imgs/slack-symbol.png', alt='')
-              h5 www.thiswasthethirdmostaskedfor.com
-            li
-              img(src='assets/imgs/slack-symbol.png', alt='')
-              h5 www.thiswasthefourthmostaskedfor.com
-            li
-              img(src='assets/imgs/slack-symbol.png', alt='')
-              h5 www.thiswasthefifthmostaskedfor.com
-        .footer
-          a(href='/popular')
-            h6 See more
-      //- Most recent ask. Live updates.
-      .card.col.s12
-        .title
-          h4 Recent Asks
-        section
-          ul
-            li
-              img(src='assets/imgs/slack-symbol.png', alt='')
-              h5 www.ijustaskedforthisurl.com
-            li
-              img(src='assets/imgs/slack-symbol.png', alt='')
-              h5 www.thiswasthesecondmostrecentask.com
-            li
-              img(src='assets/imgs/slack-symbol.png', alt='')
-              h5 www.thiswasthethirdmostrecentask.com
-            li
-              img(src='assets/imgs/slack-symbol.png', alt='')
-              h5 www.thiswasthefourthmostrecentask.com
-            li
-              img(src='assets/imgs/slack-symbol.png', alt='')
-              h5 www.thiswasthefifthmostrecentask.com
-        .footer
-          a(href='/recent')
-            h6 See more
+  h1 wut
+
+  //- //- Banner with general information.
+  //- section.col.s12
+  //-   .col.s8
+  //-     h1#title /docbot
+  //-     .divider
+  //-     h4#subtitle No (good) link left behind.
+  //- section.main-content
+  //-   //- Recently added links from admin.
+  //-   .column
+  //-     .card.col.s12
+  //-       .title
+  //-         h4 Recent Additions
+  //-       section
+  //-         ul
+  //-           li
+  //-             img(src='assets/imgs/slack-symbol.png', alt='')
+  //-             h5 www.ijustpostedthisurl.com
+  //-           li
+  //-             img(src='assets/imgs/slack-symbol.png', alt='')
+  //-             h5 www.thiswasthesecondmostrecentpost.com
+  //-           li
+  //-             img(src='assets/imgs/slack-symbol.png', alt='')
+  //-             h5 www.thiswasthethirdmostrecentpost.com
+  //-           li
+  //-             img(src='assets/imgs/slack-symbol.png', alt='')
+  //-             h5 www.thiswasthefourthmostrecentpost.com
+  //-           li
+  //-             img(src='assets/imgs/slack-symbol.png', alt='')
+  //-             h5 www.thiswasthefifthmostrecentpost.com
+  //-       .footer
+  //-         a(href='/additions')
+  //-           h6 See more
+  //-     //- Most frequent keywords asked and links pulled.
+  //-     .card.col.s12
+  //-       .title
+  //-         h4 Frequent Asks
+  //-       section
+  //-         ul
+  //-           li
+  //-             img(src='assets/imgs/slack-symbol.png', alt='')
+  //-             h5 www.mostaskedforurlever.com
+  //-           li
+  //-             img(src='assets/imgs/slack-symbol.png', alt='')
+  //-             h5 www.thiswasthesecondmostaskedfor.com
+  //-           li
+  //-             img(src='assets/imgs/slack-symbol.png', alt='')
+  //-             h5 www.thiswasthethirdmostaskedfor.com
+  //-           li
+  //-             img(src='assets/imgs/slack-symbol.png', alt='')
+  //-             h5 www.thiswasthefourthmostaskedfor.com
+  //-           li
+  //-             img(src='assets/imgs/slack-symbol.png', alt='')
+  //-             h5 www.thiswasthefifthmostaskedfor.com
+  //-       .footer
+  //-         a(href='/popular')
+  //-           h6 See more
+  //-     //- Most recent ask. Live updates.
+  //-     .card.col.s12
+  //-       .title
+  //-         h4 Recent Asks
+  //-       section
+  //-         ul
+  //-           li
+  //-             img(src='assets/imgs/slack-symbol.png', alt='')
+  //-             h5 www.ijustaskedforthisurl.com
+  //-           li
+  //-             img(src='assets/imgs/slack-symbol.png', alt='')
+  //-             h5 www.thiswasthesecondmostrecentask.com
+  //-           li
+  //-             img(src='assets/imgs/slack-symbol.png', alt='')
+  //-             h5 www.thiswasthethirdmostrecentask.com
+  //-           li
+  //-             img(src='assets/imgs/slack-symbol.png', alt='')
+  //-             h5 www.thiswasthefourthmostrecentask.com
+  //-           li
+  //-             img(src='assets/imgs/slack-symbol.png', alt='')
+  //-             h5 www.thiswasthefifthmostrecentask.com
+  //-       .footer
+  //-         a(href='/recent')
+  //-           h6 See more
