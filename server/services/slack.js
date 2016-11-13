@@ -26,8 +26,25 @@ function delegateAction(cmd){
           wordAction = query[2];
         }
       }
+
+      // return
+      if (wordAction){
+        switch (wordAction) {
+          case 'random':
+            let rndNum = Math.floor(Math.random() * 100) +1;
+            return resolve({
+              method: MongoService.getTopContentItemsByCountAndKeyword(keyword, rndNum),
+              keyword: keyword
+            });
+          default:
+            return resolve({
+              method: MongoService.getAllItems(keyword),
+              keyword: keyword
+            });
+        }
+      }
       return resolve({
-        method: MongoService.getTopContentItemsByCountAndKeyword(keyword),
+        method: MongoService.getTopContentItemsByKeyword(keyword),
         keyword: keyword
       });
     }else if (params.length > 1){
