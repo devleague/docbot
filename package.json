@@ -11,6 +11,7 @@
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-postcss": "^6.2.0",
+    "materialize-css": "^0.97.8",
     "mongoose": "^4.6.7",
     "postcss": "^5.2.5",
     "postcss-easy-import": "^1.0.1",

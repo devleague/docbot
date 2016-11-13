@@ -1,0 +1,7 @@
+
+h3.section.center-align Popular
+
+section#popular-resources.collection.scrollspy
+  each link in latest
+    if (link.url)
+      a.collection-item(href=`${link.url}`)= link.url

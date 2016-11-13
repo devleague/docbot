@@ -1,45 +1,26 @@
-html, body, header, p, ul, h1, h2, h3, h4, h5 {
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+html, body, .block {
+  height: 100%;
 }
 
-img {
-  width: 30px;
-  height: 30px;
+body {
+  color: #333;
+  background-color: #eee;
 }
 
-h1 {
-  font-size: 40px;
+img.side-nav-logo {
+  margin-top: 30px;
+  height: 140px;
+  width: 160px;
+
+  background-image: url('/assets/imgs/docbot-logo.png');
+  background-size: cover;
+  background-position: center center;
 }
 
-h2, h4 {
-  margin-left: 40px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+ul.section.table-of-contents li a.active {
+  border-left: 2px solid #66bb6a;
 }
 
-h2 {
-  border-bottom: 1px solid grey;
-}
+.footer-copyright i {
 
-h3 {
-  margin-right: 10px;
-}
-
-h5 {
-  margin-left: 20px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-li {
-  display: flex;
-  flex-direction: row;
-}
-
-#admin {
-  margin-left: 30px;
 }
