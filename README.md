@@ -23,7 +23,7 @@ must have a `.env` file located at the project's root directory. The file should
 
 ```
 API_KEY={{ibm watson api key}}
-MONGO_URL='{{mongodb://user:passowrd!@mongourl:51697/docbot}}'
+MONGO_URL='{{mongodb://user:password!@mongourl:51697/docbot}}'
 ```
 
 **get dependencies**
